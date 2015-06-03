@@ -1,0 +1,14 @@
+[ClassVersion("1.0.0"), FriendlyName("rsTeamCityAgent")]
+class RS_rsTeamCityAgent : OMI_BaseResource
+{
+[key,Description("Name of agent service to be installed")]string AgentName;
+[write,Description("Agent Installation Path")]string AgentPath;
+[write,Description("Port under which Agent will listen")]uint AgentPort;
+[write,Description("Status for TeamCity Service")]string AgentStatus;
+[write,Description("URL of existing TeamCity Server.")]string ServerURL;
+[write,Description("Configure Windows Firewall Rule")]boolean Firewall;
+[write,Description("Directory Path for workDir")]string workDir;
+[write,Description("Directory Path for tempDir")]string tempDir;
+[write,Description("Directory Path for systemDir")]string systemDir;
+[write,ValueMap{"Present", "Absent"},Values{"Present", "Absent"}] string Ensure;
+};

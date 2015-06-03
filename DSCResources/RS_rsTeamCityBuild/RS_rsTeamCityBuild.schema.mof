@@ -1,0 +1,11 @@
+
+[ClassVersion("1.0"), FriendlyName("rsTeamCityBuild")]
+class RS_rsTeamCityBuild : OMI_BaseResource
+{
+	[Key] String Name;
+	[Write] String CheckFile;
+	[Write] String TeamCityAPI;
+	[Write] String TeamCityUser;
+	[Write] String TeamCityPass;
+	[Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+};
