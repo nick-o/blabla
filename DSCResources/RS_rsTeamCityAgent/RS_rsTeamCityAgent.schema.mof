@@ -3,7 +3,7 @@ class RS_rsTeamCityAgent : OMI_BaseResource
 {
 [key,Description("Name of agent service to be installed")]string AgentName;
 [write,Description("Agent Installation Path")]string AgentPath;
-[write,Description("Port under which Agent will listen")]uint AgentPort;
+[write,Description("Port under which Agent will listen")]string AgentPort;
 [write,Description("Status for TeamCity Service")]string AgentStatus;
 [write,Description("URL of existing TeamCity Server.")]string ServerURL;
 [write,Description("Configure Windows Firewall Rule")]boolean Firewall;
